@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 1 - JavaScript</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+              <h6>Laptop Gamer AMD</h6>
+              <p>Precio base: $<span class="precio-inicial"></span> </p>
+              <p>Cantidad:
+                <span id="cantidad">0</span>
+                <button onclick="
+               let cantidad = document.getElementById('cantidad');
+               let counter = Number(cantidad.innerHTML);
+               counter = counter + 1;
+               cantidad.innerHTML = counter;
+               let totalValue = document.querySelector('.valor-total');
+               let totalPrice = counter * precio;
+               totalValue.innerHTML = totalPrice;
+               ">+</button>
+                <button onclick="
+                let cantidad = document.getElementById('cantidad');
+                let counterLess = Number(cantidad.innerHTML);
+                counterLess = counterLess - 1;
+                cantidad.innerHTML = counterLess;
+                totalValue = document.querySelector('.valor-total');
+               totalPrice = counterLess * precio;
+               totalValue.innerHTML = totalPrice;
+                ">-</button>
+              </p>
+            </div>
+        </div>
+    </section>
+    <div class="total-section">
+        <p>Total a pagar: $<span class="valor-total">0</span> </p>
+    </div>
+    <! ––«...........linkScript................«––>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
